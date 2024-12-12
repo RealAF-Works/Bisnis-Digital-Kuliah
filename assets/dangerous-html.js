@@ -1,0 +1,3 @@
+import t,{useRef as e,useEffect as r}from"react";const f=n=>{const c=e(null);r((()=>{if(!c.current)return;let t='<script type="text/javascript"><\/script>';if("html"in n)t=n.html;else if("src"in n)t=`<script src=${n.src}><\/script>`;else if("children"in n){const{children:e}=n;t=`<script type=${"type"in n?n.type:"text/javascript"}>`+e+"<\/script>"}else if("file"in n){a(n.file);return}const e=document.createRange().createContextualFragment(t);c.current.append(e)}),[]);const a=async t=>{if(!c.current)return;const e=await(await fetch(t)).text(),r=document.createRange().createContextualFragment(e);c.current.append(r)};return t.createElement("div",{style:{display:"contents"},ref:c})};export{f as default};
+
+//# sourceMappingURL=lib.mjs.map
